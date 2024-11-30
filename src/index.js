@@ -1,6 +1,16 @@
 const express = require('express');
+const cors = require('cors'); // Importa o pacote cors
 const app = express();
 const port = 3000;
+
+// Configura o CORS para permitir requisições de qualquer origem
+const corsOptions = {
+  origin: '*', // Permite qualquer origem
+  methods: 'GET', // Permite apenas o método GET
+  allowedHeaders: 'Content-Type', // Permite o cabeçalho Content-Type
+};
+
+app.use(cors(corsOptions)); // Aplica o middleware CORS com as opções
 
 // Função para formatar a data no estilo "30 de nov de 2024 às 14:30"
 const formatarDataAtual = () => {
