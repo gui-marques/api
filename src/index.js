@@ -41,7 +41,7 @@ app.get('/doador', (req, res) => {
 
   // Retornando um array com o objeto e a string da data e hora
   // res.json([dadosDoador, dataConsulta]);
-   res.json([dadosDoador]);
+   res.json(dadosDoador);
 });
 
 app.listen(port, () => {
