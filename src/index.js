@@ -40,8 +40,8 @@ app.get('/doador', (req, res) => {
   const dataConsulta = formatarDataAtual();
 
   // Retornando um array com o objeto e a string da data e hora
-  // res.json([dadosDoador, dataConsulta]);
-   res.json(dadosDoador);
+   res.json([dadosDoador, dataConsulta]);
+
 });
 
 app.listen(port, () => {
